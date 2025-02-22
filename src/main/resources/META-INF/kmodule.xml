@@ -1,0 +1,5 @@
+<kmodule xmlns="http://www.drools.org/xsd/kmodule">
+    <kbase name="fuelRulesKBase" packages="rules">
+        <ksession name="fuelKieSession"/>
+    </kbase>
+</kmodule>

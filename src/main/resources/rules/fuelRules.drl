@@ -1,0 +1,28 @@
+package rules;
+
+import com.example.NewDrools.VehicleCategory;
+import com.example.NewDrools.FuelStationCategory;
+
+rule "Fuel limit for Category 1"
+    when
+        $vehicle : VehicleCategory( category == 1 )
+    then
+        $vehicle.setFuelId(50);
+        System.out.println("Fuel limit set to 50 liters for Category 1.");
+end
+
+rule "Fuel limit for Category 2"
+    when
+        $vehicle : VehicleCategory( category == 2 )
+    then
+        $vehicle.setFuelId(30);
+        System.out.println("Fuel limit set to 30 liters for Category 2.");
+end
+
+rule "Check Fuel Station Category"
+    when
+        $station : FuelStationCategory( carCategory == 1 )
+    then
+        $station.setCarCategory(10);
+        System.out.println("Fuel station serves Category 1 vehicles.");
+end
